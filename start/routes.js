@@ -22,3 +22,4 @@ Route.get('/', () => {
 
 Route.post('login', 'UserController.login').middleware('guest')
 Route.get('users/:id', 'UserController.show').middleware('auth')
+Route.post('users', 'UserController.store')
