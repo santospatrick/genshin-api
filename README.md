@@ -15,7 +15,8 @@ docker run --name database -e POSTGRES_PASSWORD=root -p 5432:5432 -d postgres
 3. Run the following commands:
 ```
 yarn install
-adonis migration:run
+yarn adonis key:generate
+yarn adonis migration:run
 yarn dev
 ```
 
