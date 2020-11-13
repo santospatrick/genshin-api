@@ -20,6 +20,7 @@ Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
 
-Route.post('login', 'UserController.login').middleware('guest')
-Route.get('users/:id', 'UserController.show').middleware('auth')
-Route.post('users', 'UserController.store')
+Route.group(() => {
+  Route.post('auth/login', 'UserController.login').middleware('guest')
+  Route.post('auth/register', 'UserController.store')
+}).prefix('api/v1')

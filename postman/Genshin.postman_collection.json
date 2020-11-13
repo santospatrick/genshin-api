@@ -20,34 +20,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3333/login",
+					"raw": "http://localhost:3333/api/v1/auth/login",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3333",
 					"path": [
+						"api",
+						"v1",
+						"auth",
 						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "User",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3333/users/10",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3333",
-					"path": [
-						"users",
-						"10"
 					]
 				}
 			},
@@ -60,7 +43,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"tiago123@email.com\",\n    \"password\": \"senha123\",\n    \"username\": \"tiago123\"\n}",
+					"raw": "{\n    \"email\": \"{{$randomEmail}}\",\n    \"password\": \"senha123\",\n    \"username\": \"{{$randomUserName}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -68,14 +51,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3333/users",
+					"raw": "http://localhost:3333/api/v1/auth/register",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3333",
 					"path": [
-						"users"
+						"api",
+						"v1",
+						"auth",
+						"register"
 					]
 				}
 			},

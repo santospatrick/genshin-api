@@ -28,7 +28,11 @@ yarn dev
 |----------------------|----------------------------|-----------------|
 | Puppeteer Setup      | -                          | :no_entry_sign: |
 | Database Setup       | -                          | :white_check_mark: |
-| Authentication Setup | POST /api/v1/login         | :no_entry_sign: |
+| Signup               | POST /api/v1/auth/register | :white_check_mark: |
+| Login                | POST /api/v1/auth/login    | :white_check_mark: |
 | Characters List      | GET /api/v1/characters     | :no_entry_sign: |
 | Character Details    | GET /api/v1/characters/:id | :no_entry_sign: |
 
+## Postman
+
+[Download project's postman collection](https://raw.githubusercontent.com/santospatrick/genshin-api/adonis/postman/Genshin.postman_collection.json) to test endpoints
