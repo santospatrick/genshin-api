@@ -22,5 +22,5 @@ Route.get('/', () => {
 
 Route.group(() => {
   Route.post('auth/login', 'UserController.login').middleware('guest')
-  Route.post('auth/register', 'UserController.store')
+  Route.post('auth/register', 'UserController.store').validator('StoreUser')
 }).prefix('api/v1')
