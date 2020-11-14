@@ -16,6 +16,17 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
+const Env = use('Env')
+const appUrl = Env.get('APP_URL')
+
+Route.get('/', ({ request }) => {
+  return {
+    greeting: 'Welcome to the Genshin Public REST API!',
+    link: `Access our documentation: ${appUrl}/docs`
+  }
 })
+
+Route.group(() => {
+  Route.post('auth/login', 'UserController.login').middleware('guest')
+  Route.post('auth/register', 'UserController.store').validator('StoreUser')
+}).prefix('api/v1')
