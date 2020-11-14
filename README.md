@@ -32,6 +32,7 @@ yarn dev
 | Login                | POST /api/v1/auth/login    | :white_check_mark: |
 | Characters List      | GET /api/v1/characters     | :no_entry_sign: |
 | Character Details    | GET /api/v1/characters/:id | :no_entry_sign: |
+| Public Swagger       | GET /api/v1/docs           | :no_entry_sign: |
 
 ## Postman
 
