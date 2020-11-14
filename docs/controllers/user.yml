@@ -1,0 +1,32 @@
+/api/v1/auth/login:
+  post:
+    tags: 
+    - auth
+    description: Login to the application
+    consumes:
+      - application/json
+    produces:
+      - application/json
+    parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/Login"
+    security:
+      - JWT: []
+    responses:
+      200:
+        description: login
+
+definitions:
+  Login:
+    type: "object"
+    required:
+    - "name"
+    - "photoUrls"
+    properties:
+      email:
+        type: "string"
+      password:
+        type: "string"
