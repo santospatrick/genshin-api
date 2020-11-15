@@ -18,21 +18,19 @@ module.exports = {
         title: 'Genshin Public REST API 💘',
         version: '1.0.0',
       },
-  
-      basePath: '/',
+
+      basePath: '/api/v1',
 
       securityDefinitions: {
         Bearer: {
           type: 'apiKey',
           in: 'header',
           name: 'Authorization',
-          description: 'Type "Bearer {paste your token}" in the field below'
+          description: 'Type "Bearer {paste your token}" in the field below',
         },
-      }
+      },
     },
 
-    apis: [
-      'docs/**/*.yml'
-    ]
-  }
+    apis: ['docs/**/*.yml'],
+  },
 }
