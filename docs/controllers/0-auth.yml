@@ -1,0 +1,57 @@
+/auth/register:
+  post:
+    tags: 
+    - auth
+    description: Register to get bearer token so one will be able to login all call authenticated routes
+    consumes:
+      - application/json
+    produces:
+      - application/json
+    parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/Register"
+    responses:
+      200:
+        description: register
+
+/auth/login:
+  post:
+    tags: 
+    - auth
+    description: Login to the application
+    consumes:
+      - application/json
+    produces:
+      - application/json
+    parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/Login"
+    # security:
+    #   - JWT: []
+    responses:
+      200:
+        description: login
+
+definitions:
+  Register:
+    type: "object"
+    properties:
+      email:
+        type: "string"
+      password:
+        type: "string"
+      username:
+        type: "string"
+  Login:
+    type: "object"
+    properties:
+      email:
+        type: "string"
+      password:
+        type: "string"

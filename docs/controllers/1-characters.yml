@@ -1,0 +1,14 @@
+/characters:
+  get:
+    tags: 
+    - characters
+    description: Get characters list
+    consumes:
+      - application/json
+    produces:
+      - application/json
+    security:
+      - Bearer: []
+    responses:
+      200:
+        description: characters

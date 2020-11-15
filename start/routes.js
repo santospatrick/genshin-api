@@ -29,4 +29,5 @@ Route.get('/', ({ request }) => {
 Route.group(() => {
   Route.post('auth/login', 'UserController.login').middleware('guest')
   Route.post('auth/register', 'UserController.store').validator('StoreUser')
+  Route.get('characters', 'CharacterController.index').middleware('auth')
 }).prefix('api/v1')
