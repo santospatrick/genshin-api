@@ -16,21 +16,11 @@ class UserController {
   }
 
   async store({ auth, request }) {
-    const { email, password, username } = request.all()
-
-    const user = new User()
-
-    user.email = email
-    user.password = password
-    user.username = username
-
-    await user.save()
-
-    const token = await auth.attempt(user.email, password)
+    const data = request.only(['email', 'password', 'username'])
+    const user = await User.create(data)
+    const token = await auth.attempt(user.email, data.password)
 
     const body = Object.assign({}, user.toJSON(), { token })
-
-    delete body.password
 
     return body
   }
