@@ -22,7 +22,7 @@ const appUrl = Env.get('APP_URL')
 Route.get('/', ({ request }) => {
   return {
     greeting: 'Welcome to the Genshin Public REST API!',
-    link: `Access our documentation: ${appUrl}/docs`
+    link: `Access our documentation: ${appUrl}/docs`,
   }
 })
 

@@ -9,8 +9,8 @@ class ContentType {
    * @param {Request} ctx.request
    * @param {Function} next
    */
-  async handle ({ request }, next) {
-    request.request.headers['accept'] = 'application/json'
+  async handle({ request }, next) {
+    request.request.headers.accept = 'application/json'
     await next()
   }
 }

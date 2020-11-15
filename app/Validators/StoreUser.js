@@ -1,29 +1,29 @@
 'use strict'
 
 class StoreUser {
-  get validateAll () {
+  get validateAll() {
     return true
   }
 
-  get sanitizationRules () {
+  get sanitizationRules() {
     return {
-      email: 'normalize_email'
+      email: 'normalize_email',
     }
   }
 
-  get rules () {
+  get rules() {
     return {
       email: 'required|email|unique:users',
       username: 'required',
-      password: 'required'
+      password: 'required',
     }
   }
 
-  async fails (errorMessages) {
+  async fails(errorMessages) {
     const errorsAsObject = errorMessages.reduce((acc, next) => {
-      acc[next.field] = next.message;
-      return acc;
-    }, {});
+      acc[next.field] = next.message
+      return acc
+    }, {})
 
     return this.ctx.response.status(422).send(errorsAsObject)
   }
