@@ -28,6 +28,7 @@ yarn dev
 |----------------------|----------------------------|-----------------|
 | Puppeteer Setup      | -                          | :no_entry_sign: |
 | Database Setup       | -                          | :white_check_mark: |
+| Docker Setup         | -                          | :white_check_mark: |
 | Public Swagger       | GET /docs                  | :white_check_mark: |
 | Signup               | POST /api/v1/auth/register | :white_check_mark: |
 | Login                | POST /api/v1/auth/login    | :white_check_mark: |
