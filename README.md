@@ -26,14 +26,15 @@ yarn dev
 
 | Feature              | Endpoint                   | Status          |
 |----------------------|----------------------------|-----------------|
-| Puppeteer Setup      | -                          | :no_entry_sign: |
+| Puppeteer Setup      | -                          | :white_check_mark: |
 | Database Setup       | -                          | :white_check_mark: |
 | Docker Setup         | -                          | :white_check_mark: |
 | Public Swagger       | GET /docs                  | :white_check_mark: |
 | Signup               | POST /api/v1/auth/register | :white_check_mark: |
 | Login                | POST /api/v1/auth/login    | :white_check_mark: |
 | Characters List      | GET /api/v1/characters     | :white_check_mark: |
-| Character Details    | GET /api/v1/characters/:id | :no_entry_sign: |
+| Character Details    | GET /api/v1/characters/:id | :white_check_mark: |
+| Deploy v0.1.0        | https://genshin-api.santospatrick.com/api/v1 | :no_entry_sign: |
 
 ## Postman
 
