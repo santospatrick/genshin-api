@@ -162,15 +162,11 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3333/api/v1/auth/register",
-									"protocol": "http",
+									"raw": "{{BASE_URL}}/auth/register",
 									"host": [
-										"localhost"
+										"{{BASE_URL}}"
 									],
-									"port": "3333",
 									"path": [
-										"api",
-										"v1",
 										"auth",
 										"register"
 									]
@@ -186,11 +182,11 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "313"
+									"value": "273"
 								},
 								{
 									"key": "Date",
-									"value": "Sun, 15 Nov 2020 21:39:03 GMT"
+									"value": "Tue, 17 Nov 2020 01:32:34 GMT"
 								},
 								{
 									"key": "Connection",
@@ -198,7 +194,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"email\": \"cary_kuphal74@yahoo.com\",\n    \"username\": \"Kasey_Becker\",\n    \"created_at\": \"2020-11-15 18:39:03\",\n    \"updated_at\": \"2020-11-15 18:39:03\",\n    \"id\": 17,\n    \"token\": {\n        \"type\": \"bearer\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjE3LCJpYXQiOjE2MDU0NzYzNDN9.pIO-zdfG4-cnshlPHMucDFyy4_ccwSK6XyGr7ozX8dQ\",\n        \"refreshToken\": null\n    }\n}"
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIxLCJpYXQiOjE2MDU1NzY3NTR9.NkYmyUQMzc18IXHK5uUVo1WL9bqvYUZGe8xaWfXYa3Y\",\n    \"user\": {\n        \"email\": \"darron_champlin@yahoo.com\",\n        \"username\": \"Jalyn12\",\n        \"created_at\": \"2020-11-16 22:32:34\",\n        \"updated_at\": \"2020-11-16 22:32:34\",\n        \"id\": 21\n    }\n}"
 						}
 					]
 				}
@@ -225,6 +221,16 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -237,19 +243,132 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/characters",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"characters"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4230"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Nov 2020 01:16:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Amber\",\n        \"element\": \"Pyro\",\n        \"weapon\": \"Bow\",\n        \"sex\": 2,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 2,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Barbara\",\n        \"element\": \"Hydro\",\n        \"weapon\": \"Catalyst\",\n        \"sex\": 2,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 3,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Beidou\",\n        \"element\": \"Electro\",\n        \"weapon\": \"Claymore\",\n        \"sex\": 2,\n        \"nation\": 2,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 4,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Bennett\",\n        \"element\": \"Pyro\",\n        \"weapon\": \"Sword\",\n        \"sex\": 1,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 5,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Chongyun\",\n        \"element\": \"Cryo\",\n        \"weapon\": \"Claymore\",\n        \"sex\": 1,\n        \"nation\": 2,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 6,\n        \"rarity\": 5,\n        \"icon_url\": \"\",\n        \"name\": \"Diluc\",\n        \"element\": \"Pyro\",\n        \"weapon\": \"Claymore\",\n        \"sex\": 1,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 7,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Diona\",\n        \"element\": \"Cryo\",\n        \"weapon\": \"Bow\",\n        \"sex\": 2,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 8,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Fischl\",\n        \"element\": \"Electro\",\n        \"weapon\": \"Bow\",\n        \"sex\": 2,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 9,\n        \"rarity\": 5,\n        \"icon_url\": \"\",\n        \"name\": \"Jean\",\n        \"element\": \"Anemo\",\n        \"weapon\": \"Sword\",\n        \"sex\": 2,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 10,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Kaeya\",\n        \"element\": \"Cryo\",\n        \"weapon\": \"Sword\",\n        \"sex\": 1,\n        \"nation\": null,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 11,\n        \"rarity\": 5,\n        \"icon_url\": \"\",\n        \"name\": \"Keqing\",\n        \"element\": \"Electro\",\n        \"weapon\": \"Sword\",\n        \"sex\": 2,\n        \"nation\": 2,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 12,\n        \"rarity\": 5,\n        \"icon_url\": \"\",\n        \"name\": \"Klee\",\n        \"element\": \"Pyro\",\n        \"weapon\": \"Catalyst\",\n        \"sex\": 2,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 13,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Lisa\",\n        \"element\": \"Electro\",\n        \"weapon\": \"Catalyst\",\n        \"sex\": 2,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 14,\n        \"rarity\": 5,\n        \"icon_url\": \"\",\n        \"name\": \"Mona\",\n        \"element\": \"Hydro\",\n        \"weapon\": \"Catalyst\",\n        \"sex\": 2,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 15,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Ningguang\",\n        \"element\": \"Geo\",\n        \"weapon\": \"Catalyst\",\n        \"sex\": 2,\n        \"nation\": 2,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 16,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Noelle\",\n        \"element\": \"Geo\",\n        \"weapon\": \"Claymore\",\n        \"sex\": 2,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 17,\n        \"rarity\": 5,\n        \"icon_url\": \"\",\n        \"name\": \"Qiqi\",\n        \"element\": \"Cryo\",\n        \"weapon\": \"Sword\",\n        \"sex\": 2,\n        \"nation\": 2,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 18,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Razor\",\n        \"element\": \"Electro\",\n        \"weapon\": \"Claymore\",\n        \"sex\": 1,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 19,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Sucrose\",\n        \"element\": \"Anemo\",\n        \"weapon\": \"Catalyst\",\n        \"sex\": 2,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 20,\n        \"rarity\": 5,\n        \"icon_url\": \"\",\n        \"name\": \"Tartaglia\",\n        \"element\": \"Hydro\",\n        \"weapon\": \"Bow\",\n        \"sex\": 1,\n        \"nation\": null,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 21,\n        \"rarity\": 5,\n        \"icon_url\": \"\",\n        \"name\": \"Traveler\",\n        \"element\": \"Adaptive\",\n        \"weapon\": \"Sword\",\n        \"sex\": null,\n        \"nation\": null,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 22,\n        \"rarity\": 5,\n        \"icon_url\": \"\",\n        \"name\": \"Venti\",\n        \"element\": \"Anemo\",\n        \"weapon\": \"Bow\",\n        \"sex\": 1,\n        \"nation\": 1,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 23,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Xiangling\",\n        \"element\": \"Pyro\",\n        \"weapon\": \"Polearm\",\n        \"sex\": 2,\n        \"nation\": 2,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    },\n    {\n        \"id\": 24,\n        \"rarity\": 4,\n        \"icon_url\": \"\",\n        \"name\": \"Xingqiu\",\n        \"element\": \"Hydro\",\n        \"weapon\": \"Sword\",\n        \"sex\": 1,\n        \"nation\": 2,\n        \"created_at\": \"2020-11-16 19:04:30\",\n        \"updated_at\": \"2020-11-16 19:04:30\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "08b10402-ae57-4871-8b51-983d6a9eb143",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/characters/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"characters",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/characters/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"characters",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "169"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Nov 2020 01:29:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"rarity\": 4,\n    \"icon_url\": \"\",\n    \"name\": \"Amber\",\n    \"element\": \"Pyro\",\n    \"weapon\": \"Bow\",\n    \"sex\": 2,\n    \"nation\": 1,\n    \"created_at\": \"2020-11-16 19:04:30\",\n    \"updated_at\": \"2020-11-16 19:04:30\"\n}"
+						}
+					]
 				}
 			],
-			"auth": {
-				"type": "bearer",
-				"bearer": [
-					{
-						"key": "token",
-						"value": "{{access_token}}",
-						"type": "string"
-					}
-				]
-			},
 			"event": [
 				{
 					"listen": "prerequest",
