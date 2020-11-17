@@ -1,0 +1,32 @@
+
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - '5555:5432'
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: genshin
+    networks:
+      - api-network
+
+  adonis-api:
+    container_name: "${APP_NAME}-api"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - '8081:3333'
+    depends_on:
+      - db
+    networks:
+      - api-network
+
+networks: 
+  api-network:

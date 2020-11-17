@@ -12,3 +12,25 @@
     responses:
       200:
         description: characters
+
+/characters/{id}:
+  get:
+    tags: 
+    - characters
+    description: Get characters list
+    consumes:
+      - application/json
+    produces:
+      - application/json
+    parameters:
+      - name: id
+        in: path
+        description: ID of character to return
+        required: true
+        type: integer
+        format: int64
+    security:
+      - Bearer: []
+    responses:
+      200:
+        description: characters
