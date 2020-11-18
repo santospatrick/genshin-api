@@ -22,7 +22,7 @@ Genshin public REST API serving data from a Web Scraping approach
 | Login                | POST /api/v1/auth/login    | :white_check_mark: |
 | Characters List      | GET /api/v1/characters     | :white_check_mark: |
 | Character Details    | GET /api/v1/characters/:id | :white_check_mark: |
-| Deploy v0.1.0        | https://genshin-api.santospatrick.com/api/v1 | :white_check_mark: |
+| Deploy v0.1.0        | https://genshin-api.santospatrick.com/docs | :white_check_mark: |
 
 ## Development
 
