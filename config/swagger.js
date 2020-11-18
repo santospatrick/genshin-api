@@ -16,7 +16,7 @@ module.exports = {
     swaggerDefinition: {
       info: {
         title: 'Genshin Public REST API 💘',
-        version: '1.0.0',
+        version: '0.1.0',
       },
 
       basePath: '/api/v1',
