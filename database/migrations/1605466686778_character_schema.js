@@ -12,8 +12,8 @@ class CharacterSchema extends Schema {
       table.string('name')
       table.string('element')
       table.string('weapon')
-      table.integer('sex')
-      table.integer('nation')
+      table.string('sex')
+      table.string('nation')
       table.timestamps()
     })
   }
