@@ -7,7 +7,6 @@ Genshin public REST API serving data from a Web Scraping approach
 
 | Environment | Swagger Online Docs |
 |-------------|---------------------|
-| Release     | [![Swagger Release Badge](https://validator.swagger.io/validator?url=https://genshin-api-release.santospatrick.com/swagger.json)](https://genshin-api-release.santospatrick.com/docs/) |
 | Production  | [![Swagger Production Badge](https://validator.swagger.io/validator?url=https://genshin-api.santospatrick.com/swagger.json)](https://genshin-api.santospatrick.com/docs/) |
 
 ## Roadmap
